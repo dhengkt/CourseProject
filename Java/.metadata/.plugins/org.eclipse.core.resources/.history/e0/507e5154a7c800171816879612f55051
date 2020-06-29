@@ -1,0 +1,82 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.util.Scanner;
+
+public class Chapter6Problems {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		//Don't forget to change file before doing the method.
+		// File infile = new File("SIDscore");
+		Scanner inputfile = new Scanner (new File("SIDscroe"));
+		PrintStream fileOutput = new PrintStream("scoresinfo");
+//		readlines(inputfile);
+//		addSum(inputfile);
+//		printGPA(inputfile);
+//		totalScroe(inputfile);
+		ProcessScores(inputfile, fileOutput);
+		
+	}
+
+	private static void ProcessScores(Scanner inputfile, PrintStream fileOutput) {
+		
+		while (inputfile.hasNextLine()) {
+			String line = inputfile.nextLine();
+			Scanner lineInput = new Scanner(line);
+			int total = 0;
+			int id = lineInput.nextInt();
+			String name = lineInput.next();
+			while (lineInput.hasNextInt()){
+				total += lineInput.nextInt();
+			}
+			fileOutput.printf("%s's ID:%s, total score = %d.\n", name, id, total);
+			lineInput.close();
+		}
+		inputfile.close();
+
+	}
+
+	private static void totalScroe(Scanner inputfile) {
+		while(inputfile.hasNext()) {
+			String name = inputfile.next();
+			int total = 0;
+			while (inputfile.hasNextInt()) {
+				int score = inputfile.nextInt();
+				total += score;
+			}
+			System.out.printf("%s's total score is %d.\n", name, total);
+		}
+		
+	}
+
+	private static void printGPA(Scanner inputfile) {
+		while (inputfile.hasNextLine()) {
+			String name = inputfile.next();
+			double gpa = inputfile.nextDouble();
+			System.out.printf("%s's GPA is %.2f.\n", name, gpa);
+		}
+		inputfile.close();
+		
+	}
+
+	private static void addSum(Scanner inputfile) {
+		int t = 0;
+		while (inputfile.hasNextInt()) {
+			int num = inputfile.nextInt();
+			t = t + num;
+//			System.out.println(num);
+		}
+		System.out.println("The sum of all vais in the file is: " + t + '.');
+		inputfile.close();
+	}
+
+	private static void readlines(Scanner inputfile) {
+		while (inputfile.hasNextLine()) {
+			String text = inputfile.nextLine();
+			System.out.println(text);
+		}
+		inputfile.close();
+		
+	}
+
+}

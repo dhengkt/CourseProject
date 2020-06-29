@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - WordScramble",
+            "request": "launch",
+            "mainClass": "WordScramble",
+            "projectName": "Project3Phase2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Bronte",
+            "request": "launch",
+            "mainClass": "Bronte",
+            "projectName": "Project2Phase2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BronteTest",
+            "request": "launch",
+            "mainClass": "BronteTest",
+            "projectName": "Project2Phase2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Shopping",
+            "request": "launch",
+            "mainClass": "Shopping",
+            "projectName": "GroceryDesign"
+        }
+    ]
+}
