@@ -1,5 +1,7 @@
 # CourseProject
-Projects I did when I took CSS courses
+Projects I did when I took CSS courses.
+
+
 
 Code are from those courses:
 
